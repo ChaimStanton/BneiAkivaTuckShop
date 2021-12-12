@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 import sys
 
+
 class OpenDlg(QDialog):
     def __init__(self):
         super().__init__()
@@ -14,9 +15,10 @@ class OpenDlg(QDialog):
         self.layout.addWidget(self.loadButton)
         self.layout.addWidget(self.newButton)
         self.setLayout(self.layout)
-        
+
     def closeEvent(self, event):
         sys.exit()
+
 
 class NewDlg(QDialog):
     def __init__(self):
@@ -24,7 +26,7 @@ class NewDlg(QDialog):
         self.setWindowTitle("Create Machane File")
         self.setMinimumWidth(300)
         dlgBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
-        #Declare dialog buttons
+        # Declare dialog buttons
         self.buttonBox = QDialogButtonBox(dlgBtn)
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
@@ -43,13 +45,13 @@ class NewDlg(QDialog):
             "Gimmel",
             "HCourse",
         ]
-        
+
         self.yearInput = QSpinBox()
         self.yearLabel = QLabel("Year:")
         self.machaneLabel = QLabel("Machane:")
         self.layout.addRow(self.machaneLabel, self.machaneInput)
         self.layout.addRow(self.yearLabel, self.yearInput)
-        self.layout.addWidget(self.buttonBox)        
+        self.layout.addWidget(self.buttonBox)
         self.setLayout(self.layout)
         self.yearInput.setRange(5781, 6000)
         self.machaneInput.setEditable(True)

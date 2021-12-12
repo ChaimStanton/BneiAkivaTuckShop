@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 
+
 class SearchDlg(QDialog):
     def __init__(self, list=None):
         super().__init__()
@@ -8,7 +9,7 @@ class SearchDlg(QDialog):
         self.layout = QFormLayout()
         if list is None:
             dlgBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
-            '''Yes I know in this instance it doesn't matter if they press ok 
+            '''Yes I know in this instance it doesn't matter if they press ok
              or cancel but I can't be bothered to make a separate messagebox'''
             self.buttonBox = QDialogButtonBox(dlgBtn)
             self.buttonBox.accepted.connect(self.accept)
@@ -27,7 +28,7 @@ class SearchDlg(QDialog):
                     self.searchList
                 )
             self.loadButton.clicked.connect(self.accept)
-            self.newButton.clicked.connect(self.reject)    
+            self.newButton.clicked.connect(self.reject)
             self.layout.addWidget(self.loadButton)
             self.layout.addWidget(self.newButton)
             self.layout.addWidget(self.searchList)

@@ -6,13 +6,13 @@ class AddChanDlg(QDialog):
         super().__init__()
         self.setWindowTitle("Add Chanich")
         dlgBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
-        #Declare dialog buttons
+        # Declare dialog buttons
         self.buttonBox = QDialogButtonBox(dlgBtn)
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
-        #Create input form
+        # Create input form
         self.layout = QFormLayout()
-        #create widgets
+        # create widgets
         self.firstNameLabel = QLabel("First Name")
         self.firstNameInput = QLineEdit()
         self.firstNameInput.setPlaceholderText("Name")
@@ -27,7 +27,7 @@ class AddChanDlg(QDialog):
         self.fundsInput.setPrefix("£")
         self.fundsInput.setValue(10)
 
-        # Add widgets to form 
+        # Add widgets to form
         self.layout.addWidget(self.firstNameLabel)
         self.layout.addWidget(self.firstNameInput)
         self.layout.addWidget(self.lastNameLabel)

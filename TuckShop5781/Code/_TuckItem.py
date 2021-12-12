@@ -3,7 +3,7 @@ from TuckShopUI import Ui_MainWindow
 from PyQt5.QtGui import QFont
 
 
-#Class for creating Tuck Item widgets and info
+# Class for creating Tuck Item widgets and info
 class TuckItem(Ui_MainWindow, QWidget):
     def __init__(self, item, price, parent=None):
         super().__init__(parent)
@@ -27,8 +27,6 @@ class TuckItem(Ui_MainWindow, QWidget):
         # parent.tuckCounterLayout.addWidget(self.spinBox)
         # self.setLayout(parent.tuckCounterLayout)
 
-
-    # def __del__(self): 
+    # def __del__(self):
     #     self.label.deleteLater()
     #     self.spinBox.deleteLater()
-        
