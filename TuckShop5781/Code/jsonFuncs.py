@@ -59,12 +59,21 @@ def startWindow(self, application_path):
             try:
                 with open(self.fname, 'x') as file:
                     json.dump(self.jsonDict, file, indent=6)
-            except:
+            except FileExistsError:
                 self.msg = QMessageBox()
                 self.msg.setIcon(QMessageBox.Warning)
                 self.msg.setWindowTitle("Tuck Shop Error Message")
                 self.msg.setText(
                     "Error: Database already exists for that machane."
+                )
+                self.msg.exec()
+                startWindow(self, application_path)
+            except OSError:
+                self.msg = QMessageBox()
+                self.msg.setIcon(QMessageBox.Warning)
+                self.msg.setWindowTitle("Tuck Shop Error Message")
+                self.msg.setText(
+                    "Error: You are unable to access the relevant files, you may not have adequate permissions."
                 )
                 self.msg.exec()
                 startWindow(self, application_path)
