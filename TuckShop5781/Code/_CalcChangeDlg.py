@@ -1,18 +1,19 @@
 from TuckShopUI import Ui_MainWindow
 from PyQt5.QtWidgets import *
 
+
 class CalcChangeDlg(Ui_MainWindow, QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Calculate Change")
         dlgBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
-        #Declare dialog buttons
+        # Declare dialog buttons
         self.buttonBox = QDialogButtonBox(dlgBtn)
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
-        #Create input form
+        # Create input form
         self.layout = QGridLayout()
-        #create widgets
+        # create widgets
         self.minChangeLabel = QLabel(
             f'Minimum amount of change.'
         )
@@ -30,7 +31,7 @@ class CalcChangeDlg(Ui_MainWindow, QDialog):
         self.roundAmount.setPrefix("£")
         self.roundAmount.setValue(0.05)
 
-        # Add widgets to form 
+        # Add widgets to form
         self.layout.addWidget(self.minChangeLabel)
         self.layout.addWidget(self.minChange)
         self.layout.addWidget(self.roundAmountLabel)

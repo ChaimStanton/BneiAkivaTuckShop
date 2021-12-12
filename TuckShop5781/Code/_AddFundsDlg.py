@@ -1,18 +1,19 @@
 from TuckShopUI import Ui_MainWindow
 from PyQt5.QtWidgets import *
 
+
 class AddFundsDlg(Ui_MainWindow, QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Add Funds")
         dlgBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
-        #Declare dialog buttons
+        # Declare dialog buttons
         self.buttonBox = QDialogButtonBox(dlgBtn)
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
-        #Create input form
+        # Create input form
         self.layout = QGridLayout()
-        #create widgets
+        # create widgets
         self.fundsLabel = QLabel(
             f'Add funds to {parent.ChanList.currentItem().text()}?'
         )
@@ -22,7 +23,7 @@ class AddFundsDlg(Ui_MainWindow, QDialog):
         self.fundsInput.setPrefix("£")
         self.fundsInput.setValue(10)
 
-        # Add widgets to form 
+        # Add widgets to form
         self.layout.addWidget(self.fundsLabel)
         self.layout.addWidget(self.fundsInput)
         self.layout.addWidget(self.buttonBox)

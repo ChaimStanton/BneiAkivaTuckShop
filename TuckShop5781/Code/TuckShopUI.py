@@ -15,10 +15,12 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1051, 873)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         MainWindow.setDocumentMode(False)
@@ -28,10 +30,12 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
         self.labelFrame = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.labelFrame.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.labelFrame.sizePolicy().hasHeightForWidth())
         self.labelFrame.setSizePolicy(sizePolicy)
         self.labelFrame.setMinimumSize(QtCore.QSize(651, 271))
         self.labelFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -69,12 +73,15 @@ class Ui_MainWindow(object):
         self.SubmitOrderButton.setFont(font)
         self.SubmitOrderButton.setObjectName("SubmitOrderButton")
         self.orderLayout.addWidget(self.SubmitOrderButton)
-        self.gridLayout.addWidget(self.labelFrame, 1, 1, 1, 2, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
+        self.gridLayout.addWidget(
+            self.labelFrame, 1, 1, 1, 2, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom)
         self.ButtonFrame = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.ButtonFrame.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.ButtonFrame.sizePolicy().hasHeightForWidth())
         self.ButtonFrame.setSizePolicy(sizePolicy)
         self.ButtonFrame.setMinimumSize(QtCore.QSize(118, 159))
         self.ButtonFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -84,25 +91,31 @@ class Ui_MainWindow(object):
         self.buttonLayout.setObjectName("buttonLayout")
         self.AddChanichButton = QtWidgets.QPushButton(self.ButtonFrame)
         self.AddChanichButton.setObjectName("AddChanichButton")
-        self.buttonLayout.addWidget(self.AddChanichButton, 0, QtCore.Qt.AlignTop)
+        self.buttonLayout.addWidget(
+            self.AddChanichButton, 0, QtCore.Qt.AlignTop)
         self.RemoveChanichButton = QtWidgets.QPushButton(self.ButtonFrame)
         self.RemoveChanichButton.setObjectName("RemoveChanichButton")
-        self.buttonLayout.addWidget(self.RemoveChanichButton, 0, QtCore.Qt.AlignTop)
+        self.buttonLayout.addWidget(
+            self.RemoveChanichButton, 0, QtCore.Qt.AlignTop)
         self.AddTuckButton = QtWidgets.QPushButton(self.ButtonFrame)
         self.AddTuckButton.setObjectName("AddTuckButton")
         self.buttonLayout.addWidget(self.AddTuckButton, 0, QtCore.Qt.AlignTop)
         self.RemoveTuckButton = QtWidgets.QPushButton(self.ButtonFrame)
         self.RemoveTuckButton.setObjectName("RemoveTuckButton")
-        self.buttonLayout.addWidget(self.RemoveTuckButton, 0, QtCore.Qt.AlignTop)
+        self.buttonLayout.addWidget(
+            self.RemoveTuckButton, 0, QtCore.Qt.AlignTop)
         self.AddFundsButton = QtWidgets.QPushButton(self.ButtonFrame)
         self.AddFundsButton.setObjectName("AddFundsButton")
         self.buttonLayout.addWidget(self.AddFundsButton, 0, QtCore.Qt.AlignTop)
-        self.gridLayout.addWidget(self.ButtonFrame, 0, 2, 1, 1, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.gridLayout.addWidget(
+            self.ButtonFrame, 0, 2, 1, 1, QtCore.Qt.AlignRight | QtCore.Qt.AlignTop)
         self.TuckCounterFrame = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.TuckCounterFrame.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.TuckCounterFrame.sizePolicy().hasHeightForWidth())
         self.TuckCounterFrame.setSizePolicy(sizePolicy)
         self.TuckCounterFrame.setMinimumSize(QtCore.QSize(511, 531))
         self.TuckCounterFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -114,12 +127,15 @@ class Ui_MainWindow(object):
         self.tuckCounterLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.tuckCounterLayout.setContentsMargins(0, 0, 0, 0)
         self.tuckCounterLayout.setObjectName("tuckCounterLayout")
-        self.gridLayout.addWidget(self.TuckCounterFrame, 0, 1, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.gridLayout.addWidget(
+            self.TuckCounterFrame, 0, 1, 1, 1, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
         self.ChanListFrame = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.ChanListFrame.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.ChanListFrame.sizePolicy().hasHeightForWidth())
         self.ChanListFrame.setSizePolicy(sizePolicy)
         self.ChanListFrame.setMinimumSize(QtCore.QSize(351, 811))
         self.ChanListFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -127,19 +143,23 @@ class Ui_MainWindow(object):
         self.ChanListFrame.setObjectName("ChanListFrame")
         self.SearchBoxLineEdit = QtWidgets.QLineEdit(self.ChanListFrame)
         self.SearchBoxLineEdit.setGeometry(QtCore.QRect(10, 749, 250, 23))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.SearchBoxLineEdit.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.SearchBoxLineEdit.sizePolicy().hasHeightForWidth())
         self.SearchBoxLineEdit.setSizePolicy(sizePolicy)
         self.SearchBoxLineEdit.setMinimumSize(QtCore.QSize(250, 0))
         self.SearchBoxLineEdit.setObjectName("SearchBoxLineEdit")
         self.SearchButton = QtWidgets.QPushButton(self.ChanListFrame)
         self.SearchButton.setGeometry(QtCore.QRect(266, 749, 75, 23))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.SearchButton.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.SearchButton.sizePolicy().hasHeightForWidth())
         self.SearchButton.setSizePolicy(sizePolicy)
         self.SearchButton.setCheckable(False)
         self.SearchButton.setChecked(False)
@@ -148,20 +168,24 @@ class Ui_MainWindow(object):
         self.SearchButton.setObjectName("SearchButton")
         self.LastNameSortButton = QtWidgets.QPushButton(self.ChanListFrame)
         self.LastNameSortButton.setGeometry(QtCore.QRect(10, 780, 151, 23))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.LastNameSortButton.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.LastNameSortButton.sizePolicy().hasHeightForWidth())
         self.LastNameSortButton.setSizePolicy(sizePolicy)
         self.LastNameSortButton.setMinimumSize(QtCore.QSize(151, 0))
         self.LastNameSortButton.setObjectName("LastNameSortButton")
         self.FirstNameSortButton = QtWidgets.QPushButton(self.ChanListFrame)
         self.FirstNameSortButton.setEnabled(True)
         self.FirstNameSortButton.setGeometry(QtCore.QRect(190, 780, 151, 23))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.FirstNameSortButton.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.FirstNameSortButton.sizePolicy().hasHeightForWidth())
         self.FirstNameSortButton.setSizePolicy(sizePolicy)
         self.FirstNameSortButton.setMinimumSize(QtCore.QSize(151, 0))
         self.FirstNameSortButton.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -170,7 +194,8 @@ class Ui_MainWindow(object):
         self.ChanList = QtWidgets.QListWidget(self.ChanListFrame)
         self.ChanList.setGeometry(QtCore.QRect(10, 0, 331, 741))
         self.ChanList.setObjectName("ChanList")
-        self.gridLayout.addWidget(self.ChanListFrame, 0, 0, 2, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.gridLayout.addWidget(
+            self.ChanListFrame, 0, 0, 2, 1, QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
         self.TuckCounterFrame.raise_()
         self.ButtonFrame.raise_()
         self.ChanListFrame.raise_()
@@ -182,7 +207,8 @@ class Ui_MainWindow(object):
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
         self.menuImport_Excel_Spreadsheet = QtWidgets.QMenu(self.menuFile)
-        self.menuImport_Excel_Spreadsheet.setObjectName("menuImport_Excel_Spreadsheet")
+        self.menuImport_Excel_Spreadsheet.setObjectName(
+            "menuImport_Excel_Spreadsheet")
         self.menuHelp = QtWidgets.QMenu(self.menubar)
         self.menuHelp.setObjectName("menuHelp")
         MainWindow.setMenuBar(self.menubar)
@@ -220,27 +246,40 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.NameLabel.setText(_translate("MainWindow", "Name: "))
-        self.CurrentFundsLabel.setText(_translate("MainWindow", "Current Funds:"))
+        self.CurrentFundsLabel.setText(
+            _translate("MainWindow", "Current Funds:"))
         self.CostLabel.setText(_translate("MainWindow", "Cost:"))
         self.NewFundsLabel.setText(_translate("MainWindow", "New Funds:"))
-        self.SubmitOrderButton.setText(_translate("MainWindow", "Submit Order"))
-        self.AddChanichButton.setText(_translate("MainWindow", "Add Chanich/a"))
-        self.RemoveChanichButton.setText(_translate("MainWindow", "Remove Chanich/a"))
+        self.SubmitOrderButton.setText(
+            _translate("MainWindow", "Submit Order"))
+        self.AddChanichButton.setText(
+            _translate("MainWindow", "Add Chanich/a"))
+        self.RemoveChanichButton.setText(
+            _translate("MainWindow", "Remove Chanich/a"))
         self.AddTuckButton.setText(_translate("MainWindow", "Add Tuck Item"))
-        self.RemoveTuckButton.setText(_translate("MainWindow", "Remove Tuck Item"))
+        self.RemoveTuckButton.setText(
+            _translate("MainWindow", "Remove Tuck Item"))
         self.AddFundsButton.setText(_translate("MainWindow", "Add Funds"))
         self.SearchButton.setText(_translate("MainWindow", "Search"))
-        self.LastNameSortButton.setText(_translate("MainWindow", "Sort by Last Name"))
-        self.FirstNameSortButton.setText(_translate("MainWindow", "Sort by First Name"))
+        self.LastNameSortButton.setText(
+            _translate("MainWindow", "Sort by Last Name"))
+        self.FirstNameSortButton.setText(
+            _translate("MainWindow", "Sort by First Name"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
-        self.menuImport_Excel_Spreadsheet.setTitle(_translate("MainWindow", "Import Excel Spreadsheet"))
+        self.menuImport_Excel_Spreadsheet.setTitle(
+            _translate("MainWindow", "Import Excel Spreadsheet"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
-        self.actionLoad_Machane.setText(_translate("MainWindow", "Load Machane"))
-        self.actionCalculate_Change.setText(_translate("MainWindow", "Calculate Change"))
+        self.actionLoad_Machane.setText(
+            _translate("MainWindow", "Load Machane"))
+        self.actionCalculate_Change.setText(
+            _translate("MainWindow", "Calculate Change"))
         self.actionHelp_Page.setText(_translate("MainWindow", "Help Page"))
-        self.actionView_Tuck_List.setText(_translate("MainWindow", "Export Tuck List"))
-        self.actionNew_Machane.setText(_translate("MainWindow", "New/Load Machane"))
-        self.actionImport_Chans.setText(_translate("MainWindow", "Import Chans"))
+        self.actionView_Tuck_List.setText(
+            _translate("MainWindow", "Export Tuck List"))
+        self.actionNew_Machane.setText(
+            _translate("MainWindow", "New/Load Machane"))
+        self.actionImport_Chans.setText(
+            _translate("MainWindow", "Import Chans"))
         self.actionImport_Tuck.setText(_translate("MainWindow", "Import Tuck"))
 
 

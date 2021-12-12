@@ -1,27 +1,29 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-#Import dialog box classes
+# Import dialog box classes
 from _OpenDlg import OpenDlg, NewDlg
-#Import Object Classes
+# Import Object Classes
 from _Chanich import Chanich
 from _TuckItem import TuckItem
-#Import json for saving chan/tuck lists
+# Import json for saving chan/tuck lists
 import json
 import sys
 
-#Load lists from save file or create new lists
+# Load lists from save file or create new lists
+
+
 def startWindow(self, application_path):
     self.openDlg = OpenDlg()
     # Load file selected
     if self.openDlg.exec():
-        #Call json file selection
+        # Call json file selection
         self.fname, _ = QFileDialog.getOpenFileName(
             self, "Select Machane",
             application_path,
             "Machane Files (*.json)"
         )
         # file selected
-        if self.fname:   #Load selected json file
+        if self.fname:  # Load selected json file
             with open(self.fname, 'r') as file:
                 data = json.load(file)
             # Load list of chanichim as QListWidgetItems
@@ -37,15 +39,15 @@ def startWindow(self, application_path):
                 # print(tuck["item"], tuck["price"])
                 newTuck = TuckItem(
                     tuck["item"], tuck["price"], self
-                    )
-                self.addTuck(newTuck)       
+                )
+                self.addTuck(newTuck)
         # No file selected (cancel/exit)
         else:
-            #Call original load/create new dialog again
+            # Call original load/create new dialog again
             startWindow(self, application_path)
     # New file selected
     else:
-        #Call json file creation
+        # Call json file creation
         self.newDlg = NewDlg()
         if self.newDlg.exec():
             self.fname = (
@@ -69,7 +71,9 @@ def startWindow(self, application_path):
         else:
             sys.exit()
 
-#Update Json file
+# Update Json file
+
+
 def saveJson(self):
     with open(self.fname, 'w') as file:
         json.dump(self.jsonDict, file, indent=6)

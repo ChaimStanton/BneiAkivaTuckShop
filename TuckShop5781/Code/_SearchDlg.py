@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 
+
 class SearchDlg(QDialog):
     def __init__(self, list=None):
         super().__init__()
@@ -27,7 +28,7 @@ class SearchDlg(QDialog):
                     self.searchList
                 )
             self.loadButton.clicked.connect(self.accept)
-            self.newButton.clicked.connect(self.reject)    
+            self.newButton.clicked.connect(self.reject)
             self.layout.addWidget(self.loadButton)
             self.layout.addWidget(self.newButton)
             self.layout.addWidget(self.searchList)
