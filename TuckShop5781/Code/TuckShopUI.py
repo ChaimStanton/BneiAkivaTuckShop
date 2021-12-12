@@ -74,7 +74,8 @@ class Ui_MainWindow(object):
         self.SubmitOrderButton.setObjectName("SubmitOrderButton")
         self.orderLayout.addWidget(self.SubmitOrderButton)
         self.gridLayout.addWidget(
-            self.labelFrame, 1, 1, 1, 2, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom)
+            self.labelFrame, 1, 1, 1, 2, QtCore.Qt.AlignRight |
+            QtCore.Qt.AlignBottom)
         self.ButtonFrame = QtWidgets.QFrame(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
@@ -108,10 +109,12 @@ class Ui_MainWindow(object):
         self.AddFundsButton.setObjectName("AddFundsButton")
         self.buttonLayout.addWidget(self.AddFundsButton, 0, QtCore.Qt.AlignTop)
         self.gridLayout.addWidget(
-            self.ButtonFrame, 0, 2, 1, 1, QtCore.Qt.AlignRight | QtCore.Qt.AlignTop)
+            self.ButtonFrame, 0, 2, 1, 1, QtCore.Qt.AlignRight |
+            QtCore.Qt.AlignTop)
         self.TuckCounterFrame = QtWidgets.QFrame(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+            QtWidgets.QSizePolicy.MinimumExpanding,
+            QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(
@@ -128,7 +131,8 @@ class Ui_MainWindow(object):
         self.tuckCounterLayout.setContentsMargins(0, 0, 0, 0)
         self.tuckCounterLayout.setObjectName("tuckCounterLayout")
         self.gridLayout.addWidget(
-            self.TuckCounterFrame, 0, 1, 1, 1, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
+            self.TuckCounterFrame, 0, 1, 1, 1, QtCore.Qt.AlignHCenter |
+            QtCore.Qt.AlignTop)
         self.ChanListFrame = QtWidgets.QFrame(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
@@ -195,7 +199,8 @@ class Ui_MainWindow(object):
         self.ChanList.setGeometry(QtCore.QRect(10, 0, 331, 741))
         self.ChanList.setObjectName("ChanList")
         self.gridLayout.addWidget(
-            self.ChanListFrame, 0, 0, 2, 1, QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
+            self.ChanListFrame, 0, 0, 2, 1, QtCore.Qt.AlignLeft |
+            QtCore.Qt.AlignTop)
         self.TuckCounterFrame.raise_()
         self.ButtonFrame.raise_()
         self.ChanListFrame.raise_()

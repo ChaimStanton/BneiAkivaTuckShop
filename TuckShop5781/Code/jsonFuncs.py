@@ -73,7 +73,8 @@ def startWindow(self, application_path):
                 self.msg.setIcon(QMessageBox.Warning)
                 self.msg.setWindowTitle("Tuck Shop Error Message")
                 self.msg.setText(
-                    "Error: You are unable to access the relevant files, you may not have adequate permissions."
+                    """Error: You are unable to access the relevant files.
+                    You may not have adequate permissions."""
                 )
                 self.msg.exec()
                 startWindow(self, application_path)
